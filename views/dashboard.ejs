@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Willi - Dashboard</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/dashboard.css">
+    </head>
+    <body>
+        
+        <ul class="mainUL">
+            <li class="sub-li">
+                    
+                <div class="mainDiv">
+
+                    <div class="sub-li-handler">
+
+                        
+                        <img src="/img/test.png" alt="" class="bot-image">
+                        
+                        <h3>RApTOR Bot <small>#2563</small></h3>
+                        <p>Watching Syndicate Family</p>
+
+                    </div>
+                    
+                    <span class="menu">
+                        <div class="menu-right" style="display: flex; flex-direction: column; justify-content: space-between;">
+                            <div class="menu-right-top">
+                                <img src="/img/test.png" alt="">
+                                <h3>RApTOR Bot <small>#1234</small></h3>
+                                
+                                <ul class="menu-right-ul">
+
+                                    <li class="mr-li">
+                                        <p class="mr-li-key">Owner</p>
+                                        <p class="mr-li-value">FarhadRApTOR</p>
+                                    </li>
+                                    
+                                    <li class="mr-li">
+                                        <p class="mr-li-key">Developer</p>
+                                        <p class="mr-li-value">Williams</p>
+                                    </li>
+                                    
+                                    <li class="mr-li">
+                                        <p class="mr-li-key">Servers</p>
+                                        <p class="mr-li-value">10</p>
+                                    </li>
+                                    
+                                    <li class="mr-li">
+                                        <p class="mr-li-key">Users</p>
+                                        <p class="mr-li-value">1000</p>
+                                    </li>
+                                    
+                                    <li class="mr-li">
+                                        <p class="mr-li-key">Bot ID</p>
+                                        <p class="mr-li-value">1231249832434</p>
+                                    </li>
+                                    
+                                    <li class="mr-li">
+                                        <p class="mr-li-key">Web ID</p>
+                                        <p class="mr-li-value">3</p>
+                                    </li>
+                                
+                                </ul>
+                            </div>
+
+                            <button onclick="back()">Back</button>
+                        </div>
+                    </span>
+                </div>
+                
+
+            </li>
+        </ul>
+
+        <script>
+            var tags = document.getElementsByClassName('sub-li-handler');
+            var sub = document.getElementsByClassName("sub-li")
+            for(var i = 0; i < tags.length; i++) {
+                var tag = tags[i];
+                var sub = sub[i];
+                tag.addEventListener('click', function(s) {
+                    sub.className = "sub-li active";
+                    sub.querySelector(".sub-li-handler").style.opacity = "0"
+                    setTimeout(() => {
+                        sub.querySelector(".sub-li-handler").style.display = "none"
+                        sub.querySelector(".menu").style.display = "block"
+                        sub.querySelector(".mainDiv").style.display = "block"
+                        setTimeout(() => {
+                            sub.querySelector(".menu").style.opacity = "1"
+                        }, 10);
+                    }, 500);
+                });
+            }
+
+            function back() {
+                var tags = document.getElementsByClassName('sub-li');
+                for(var i = 0; i < tags.length; i++) {
+                    var tag = tags[i];
+                    tag.querySelector(".menu").style.opacity = "0"
+                    setTimeout(() => {
+                        tag.querySelector(".menu").style.display = "none"
+                        tag.querySelector(".sub-li-handler").style.display = "flex"
+                        setTimeout(() => {
+                            tag.querySelector(".sub-li-handler").style.opacity = "1"
+                            tag.className = "sub-li";
+                        }, 100);
+                    }, 500);
+                }
+            }
+        </script>
+
+    </body>
+</html>
