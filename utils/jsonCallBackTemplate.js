@@ -7,3 +7,5 @@ const templates = {
         "message"                  : NaN
     }
 }
+
+module.exports = templates

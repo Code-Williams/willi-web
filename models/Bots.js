@@ -13,7 +13,8 @@ const Bots = db.define("bots", {
     },
 
     picture : {
-        type : DataTypes.STRING
+        type : DataTypes.STRING,
+        defaultValue : ""
     },
 
     owner : {

@@ -3,6 +3,7 @@ const templates = require("../../utils/jsonCallBackTemplate")
 
 const post = async(req, res) => {
     const client = req.body.client
+
     if(!client){
         return res.json({
             ok : false,
@@ -14,6 +15,8 @@ const post = async(req, res) => {
     const isBotRegistered = await Bot.findOne({ where : { botId : client.id } })
     if(!isBotRegistered) {
         const callBackData = templates.access_run
+        callBackData.ok = false
+        callBackData.isBotRegistered = false
         callBackData.message = "Your bot is not registered"
         return res.json(callBackData)
     }
@@ -42,8 +45,8 @@ const post = async(req, res) => {
     callBackData.isBotRegistered = true
 
     isBotRegistered.update({
-        name            : client.user.username,
-        picture         : client.user.displayAvatarURL({size : 1024}),
+        name            : client.name,
+        picture         : client.picture,
         lastRun         : new Date(),
     })
 

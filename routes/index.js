@@ -4,6 +4,10 @@ const Router = new express.Router()
 
 const { isLoggedIn, isNotLoggedIn, isUserAdmin } = require("../helpers/auth")
 
+const botRegisterController = require("../controllers/botRegisterController")
+Router.get("/bots/register", botRegisterController.get)
+Router.post("/bots/register", botRegisterController.post)
+
 const homePageController = require("../controllers/homePageController")
 Router.get("/", isNotLoggedIn, homePageController.get)
 Router.post("/login", homePageController.post, homePageController.loginSuccess)
