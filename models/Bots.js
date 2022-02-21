@@ -21,11 +21,13 @@ const Bots = db.define("bots", {
     },
 
     lastRun : {
-        type : DataTypes.DATE
+        type : DataTypes.DATE,
+        defaultValue : 0
     },
 
     upTime : {
-        type : DataTypes.DATE
+        type : DataTypes.DATE,
+        defaultValue : 0
     },
 
     bills : {
