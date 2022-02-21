@@ -20,10 +20,6 @@ const Bots = db.define("bots", {
         type : DataTypes.STRING
     },
 
-    running : {
-        type : DataTypes.BOOLEAN
-    },
-
     lastRun : {
         type : DataTypes.DATE
     },
@@ -32,11 +28,17 @@ const Bots = db.define("bots", {
         type : DataTypes.DATE
     },
 
-    status : {
-        type : DataTypes.STRING
+    bills : {
+        type : DataTypes.NUMBER,
+        defaultValue : 0
     },
 
-    statusType : {
+    blocked : {
+        type : DataTypes.NUMBER,
+        defaultValue : 0
+    },
+
+    botId : {
         type : DataTypes.STRING
     }
 },{

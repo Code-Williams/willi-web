@@ -14,4 +14,7 @@ Router.get("/register", registerController.post)
 const dashboardController = require("../controllers/dashboardController")
 Router.get("/dashboard", isLoggedIn, dashboardController.get)
 
+const accessRunController = require("../controllers/APIs/accessRunController")
+Router.post("/api/v1/access_run", accessRunController)
+
 module.exports = Router
