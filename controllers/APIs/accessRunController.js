@@ -36,6 +36,7 @@ const post = async(req, res) => {
         return res.json(callBackData)
     }
 
+    // Bot have access to run
     const callBackData = templates.access_run
     callBackData.ok = true
     callBackData.isBotRegistered = true
