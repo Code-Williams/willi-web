@@ -25,6 +25,11 @@ const User = db.define("users", {
     userRank : {
         type : DataTypes.STRING,
         defaultValue : "user"
+    },
+
+    debt : {
+        type : DataTypes.NUMBER,
+        defaultValue : 0
     }
 }, {
     timestamps : false

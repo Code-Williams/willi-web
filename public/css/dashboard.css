@@ -84,9 +84,12 @@ body{
     padding: 0.5%;
     margin: 0.5%;
     box-shadow: 0 0 10px 1px rgb(14, 14, 14);
-    border-radius: 7px;
+    /* border-radius: 7px; */
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
     height: 96%;
     width: 18%;
+    margin-left: 0;
 }
 
 .menu-right-top{
