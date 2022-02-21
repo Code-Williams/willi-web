@@ -22,12 +22,12 @@ const Bots = db.define("bots", {
 
     lastRun : {
         type : DataTypes.DATE,
-        defaultValue : 0
+        defaultValue : new Date()
     },
 
     upTime : {
         type : DataTypes.DATE,
-        defaultValue : 0
+        defaultValue : new Date()
     },
 
     bills : {
