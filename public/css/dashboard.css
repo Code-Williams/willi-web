@@ -138,3 +138,7 @@ body{
     background-color: red;
     color: white;
 }
+
+.bot-image{
+    border-radius: 50%;
+}

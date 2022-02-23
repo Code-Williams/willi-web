@@ -7,8 +7,6 @@ const get = async (req, res) => {
         }
     })
 
-    console.log("userBots", userBots)
-
     res.render("dashboard", {
         user : req.user,
         userBots,
