@@ -47,6 +47,8 @@ const post = async(req, res) => {
     isBotRegistered.update({
         name            : client.name,
         picture         : client.picture,
+        servers         : client.servers,
+        users           : client.users,
         lastRun         : new Date(),
     })
 

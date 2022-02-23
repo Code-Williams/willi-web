@@ -43,6 +43,16 @@ const Bots = db.define("bots", {
 
     botId : {
         type : DataTypes.STRING
+    },
+
+    servers : {
+        type : DataTypes.STRING,
+        defaultValue : "-"
+    },
+
+    users : {
+        type : DataTypes.STRING,
+        defaultValue : "-"
     }
 },{
     timestamps : false

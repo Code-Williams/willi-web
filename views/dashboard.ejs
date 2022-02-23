@@ -12,72 +12,84 @@
     <body>
         
         <ul class="mainUL">
-            <li class="sub-li">
-                    
-                <div class="mainDiv">
+            <% userBots.forEach(bot => { %>
+                <% const nameSplit = bot.name.split("#") %>
 
-                    <div class="sub-li-handler">
-
+                <li class="sub-li">
                         
-                        <img src="/img/test.png" alt="" class="bot-image">
-                        
-                        <h3>RApTOR Bot <small>#2563</small></h3>
-                        <p>Watching Syndicate Family</p>
+                    <div class="mainDiv">
 
+                        <div class="sub-li-handler">
+
+                            
+                            <img src="/img/test.png" alt="" class="bot-image">
+                            
+                            <h3><%= nameSplit[0] %> <small>#<%= nameSplit[nameSplit.length - 1] %></small></h3>
+                            <!-- <p>Watching Syndicate Family</p> -->
+
+                        </div>
+                        
+                        <span class="menu">
+                            <div class="menu-right" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <div class="menu-right-top">
+                                    <img src="/img/test.png" alt="">
+                                    <h3><%= nameSplit[0] %> <small>#<%= nameSplit[nameSplit.length - 1] %></small></h3>
+                                    
+                                    <ul class="menu-right-ul">
+
+                                        <li class="mr-li">
+                                            <p class="mr-li-key">Owner</p>
+                                            <p class="mr-li-value"><%= user.username %></p>
+                                        </li>
+                                        
+                                        <li class="mr-li">
+                                            <p class="mr-li-key">Developer</p>
+                                            <p class="mr-li-value">Williams</p>
+                                        </li>
+                                        
+                                        <li class="mr-li">
+                                            <p class="mr-li-key">Servers</p>
+                                            <p class="mr-li-value"><%= bot.servers %></p>
+                                        </li>
+                                        
+                                        <li class="mr-li">
+                                            <p class="mr-li-key">Users</p>
+                                            <p class="mr-li-value"><%= bot.users %></p>
+                                        </li>
+                                        
+                                        <li class="mr-li">
+                                            <p class="mr-li-key">Bot ID</p>
+                                            <p class="mr-li-value"><%= bot.botId %></p>
+                                        </li>
+                                        
+                                        <li class="mr-li">
+                                            <p class="mr-li-key">Web ID</p>
+                                            <p class="mr-li-value"><%= bot.id %></p>
+                                        </li>
+
+                                        <li class="mr-li">
+                                            <p class="mr-li-key">Bills</p>
+                                            <p class="mr-li-value"><%= bot.bills %> T</p>
+                                        </li>
+
+                                        <li class="mr-li">
+                                            <p class="mr-li-key">Banned</p>
+                                            <p class="mr-li-value"><%= (bot.blocked == "0") ? "No" : "Yes" %></p>
+                                        </li>
+                                    
+                                    </ul>
+                                </div>
+
+                                <button onclick="back()">Back</button>
+                            </div>
+                        </span>
                     </div>
                     
-                    <span class="menu">
-                        <div class="menu-right" style="display: flex; flex-direction: column; justify-content: space-between;">
-                            <div class="menu-right-top">
-                                <img src="/img/test.png" alt="">
-                                <h3>RApTOR Bot <small>#1234</small></h3>
-                                
-                                <ul class="menu-right-ul">
 
-                                    <li class="mr-li">
-                                        <p class="mr-li-key">Owner</p>
-                                        <p class="mr-li-value">FarhadRApTOR</p>
-                                    </li>
-                                    
-                                    <li class="mr-li">
-                                        <p class="mr-li-key">Developer</p>
-                                        <p class="mr-li-value">Williams</p>
-                                    </li>
-                                    
-                                    <li class="mr-li">
-                                        <p class="mr-li-key">Servers</p>
-                                        <p class="mr-li-value">10</p>
-                                    </li>
-                                    
-                                    <li class="mr-li">
-                                        <p class="mr-li-key">Users</p>
-                                        <p class="mr-li-value">1000</p>
-                                    </li>
-                                    
-                                    <li class="mr-li">
-                                        <p class="mr-li-key">Bot ID</p>
-                                        <p class="mr-li-value">1231249832434</p>
-                                    </li>
-                                    
-                                    <li class="mr-li">
-                                        <p class="mr-li-key">Web ID</p>
-                                        <p class="mr-li-value">3</p>
-                                    </li>
-                                
-                                </ul>
-                            </div>
+                </li>
 
-                            <button onclick="back()">Back</button>
-                        </div>
+            <% }) %>
 
-                        <div style="height: 98%;background-color: rgb(59, 59, 59); width: 150px; float: right;margin: 0.5%;margin-right: 0; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
-                            s
-                        </div>
-                    </span>
-                </div>
-                
-
-            </li>
         </ul>
 
         <script>
