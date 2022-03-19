@@ -12,8 +12,8 @@ const homePageController = require("../controllers/homePageController")
 Router.get("/", isNotLoggedIn, homePageController.get)
 Router.post("/login", homePageController.post, homePageController.loginSuccess)
 
-const registerController = require("../controllers/registerController")
-Router.get("/register", registerController.post)
+// const registerController = require("../controllers/registerController")
+// Router.get("/register", registerController.get)
 
 const dashboardController = require("../controllers/dashboardController")
 Router.get("/dashboard", isLoggedIn, dashboardController.get)
