@@ -5,7 +5,7 @@ const isLoggedIn = (req, res, next) => {
 
         req.flash("warning", "You must be logged in to view this page")
         req.session.redirectTo = req.url;
-        return res.redirect("/");
+        return res.redirect("/login");
 
     }
 

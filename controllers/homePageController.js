@@ -1,25 +1,10 @@
-const passport = require("passport")
-
 const get = (req, res) => {
     res.render("index", {
-        flash : req.flash()
+        flash : req.flash(),
+        user : req.user
     })
-}
-
-const post = passport.authenticate("local", {
-    failureRedirect : "/",
-    failureFlash : true,
-    session : true
-})
-
-const loginSuccess = (req, res) => {
-    var redirectTo = req.session.redirectTo || "/dashboard"
-    delete req.session.redirectTo
-    res.redirect(redirectTo)
 }
 
 module.exports = {
     get,
-    post,
-    loginSuccess
 }

@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Willi Website</title>
 
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <header>
+            <div class="header-right">
+                <div class="header-right-right">
+                    <% if(user){ %>
 
-    <title>Willi Team Website</title>
-</head>
-<body style="padding: 0; margin: 0;">
-    
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-    </style>
+                        <a href="/dashboard" class="auth-a">
+                            داشبورد
+                        </a>
 
-    <div class="handler">
+                    <% }else{ %>
 
-        <div class="infoPanel">
-            <form action="/login" method="post">
+                        <a href="/login" class="auth-a">
+                            ورود
+                        </a>
 
-                <h1>Login
-                    
-                    <center>
+                        <a href="/register" class="auth-a">
+                            ثبت نام
+                        </a>
 
-                        <% for(const key in flash){ %>
-                            <p class="flash flash-<%= key %>">
-                                <%= flash[key] %>
-                            </p>
-                        <% } %>
-                    </center>
-
-                </h1>
-
-                
-                <div class="inputs">
-                    <input type="text" name="username" placeholder="Username">
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                
-                <div class="buttons">
-                    <button>Login</button>
+                    <% } %>
                 </div>
 
-            </form>
-        </div>
-
-    </div>
-
-</body>
+                <div class="header-right-center">
+                    <ul class="header-rc-ul">
+                        <li class="header-rc-li">
+                            <a href="">درباره ما</a>
+                        </li>
+                        <li class="header-rc-li">
+                            <a href="">فروشگاه</a>
+                        </li>
+                        <li class="header-rc-li">
+                            <a href="">خدمات</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </body>
 </html>
