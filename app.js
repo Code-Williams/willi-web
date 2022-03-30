@@ -23,13 +23,13 @@ app.use(passport.session())
 
 require("./helpers/passport")
 
+// GET requests handlers
 const routes = require("./routes")
-const user = require("./models/User")
 app.use("/", routes)
 
-app.get("/", (req, res) => {
-    res.render("index")
-})
+// POST requests handlers
+const apiRoutes = require("./routes/api")
+app.use("/api", apiRoutes)
 
 app.listen(PORT , () => {
     console.log(`Server is listening to ${PORT}`)
