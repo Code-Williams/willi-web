@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <title>Willi Team Website</title>
+</head>
+<body style="padding: 0; margin: 0;">
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+    <div class="handler">
+
+        <div class="infoPanel">
+
+            <h1>ثبت نام
+                
+                <center>
+
+                    <% for(const key in flash){ %>
+                        <p class="flash flash-<%= key %>">
+                            <%= flash[key] %>
+                        </p>
+                    <% } %>
+                </center>
+
+            </h1>
+
+            
+            <div class="inputs">
+                <h2 style="direction: rtl; font-size: 30px; color: rgba(256, 0, 0, 80%);">ثبت نام در این سایت غیر فعال است.</h2>
+            </div>
+
+            <div class="buttons">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
