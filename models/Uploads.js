@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize")
 const db = require("../configs/db")
 
-const Services = db.define("services", {
+const Uploads = db.define("uploads", {
     id : {
         type : DataTypes.NUMBER,
         primaryKey : true,
@@ -23,4 +23,4 @@ const Services = db.define("services", {
     timestamps : false
 })
 
-module.exports = Services
+module.exports = Uploads
