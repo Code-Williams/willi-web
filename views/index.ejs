@@ -8,44 +8,19 @@
 
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/fonts.css">
     </head>
     <body>
-        <header>
-            <div class="header-right">
-                <div class="header-right-right">
-                    <% if(user){ %>
+        <%- include("./templates/header.ejs") %>
 
-                        <a href="/dashboard" class="auth-a">
-                            داشبورد
-                        </a>
-
-                    <% }else{ %>
-
-                        <a href="/login" class="auth-a">
-                            ورود
-                        </a>
-
-                        <a href="/register" class="auth-a">
-                            ثبت نام
-                        </a>
-
-                    <% } %>
-                </div>
-
-                <div class="header-right-center">
-                    <ul class="header-rc-ul">
-                        <li class="header-rc-li">
-                            <a href="">درباره ما</a>
-                        </li>
-                        <li class="header-rc-li">
-                            <a href="">فروشگاه</a>
-                        </li>
-                        <li class="header-rc-li">
-                            <a href="">خدمات</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="main-element">
+            <div class="m-right">
+                <p class="m-r-title">ویلی تیم</p>
+                <p class="m-r-description">A team working on Disocrd Verified Bot Dev & Full Stack</p>
             </div>
-        </header>
+            <div class="m-left">
+                <img src="/img/headerPicture.png" alt="Header picture of willi team website">
+            </div>
+        </div>
     </body>
 </html>
