@@ -1,0 +1,37 @@
+<header>
+    <div class="header-right">
+        <div class="header-right-right">
+            <% if(user){ %>
+
+                <a href="/dashboard" class="auth-a">
+                    داشبورد
+                </a>
+
+            <% }else{ %>
+
+                <a href="/login" class="auth-a">
+                    ورود
+                </a>
+
+                <a href="/register" class="auth-a">
+                    ثبت نام
+                </a>
+
+            <% } %>
+        </div>
+
+        <div class="header-right-center">
+            <ul class="header-rc-ul">
+                <li class="header-rc-li">
+                    <a href="">درباره ما</a>
+                </li>
+                <li class="header-rc-li">
+                    <a href="">فروشگاه</a>
+                </li>
+                <li class="header-rc-li">
+                    <a href="">خدمات</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
