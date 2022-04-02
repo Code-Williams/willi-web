@@ -18,7 +18,7 @@ const post = async (req, res) => {
                 number : req.body.number,
                 email : req.body.email
             })
-            req.flash("success", "فایل شما با موفقیت آپلود شد.")
+            req.flash("success", `Upload successfully done. Link : https://wil1i.ir/uploads/${req.file.filename}`)
             res.redirect("/uploader")
             return
         }

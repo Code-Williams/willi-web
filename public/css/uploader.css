@@ -12,15 +12,11 @@
     width: 60%;
     padding: 10px;
     border-radius: 15px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 10%);
 }
 
 .services-inp{
     float: right;
-    width: 30%;
-    margin-right: 2%;
-}
-
-.services-inp{
     direction: rtl;
     text-align: right;
     padding: 7px;
@@ -29,6 +25,18 @@
     border: 1px solid gray;
     resize: none;
     width: 40%;
+}
+
+.services-inp-handler{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services-inp-handler p {
+    width: 40%;
+    text-align: right;
 }
 
 .services-right{
@@ -41,12 +49,17 @@
 
 .uploadFile{
     width: 40%;
-    border: 1px solid rgb(0, 0, 41);
+    border: 1px solid gray;
     padding: 10px 5px;
     margin: 5px;
     border-radius: 5px;
 }
 
 .submit{
-    padding: 5px 10px;
+    padding: 6px 14px;
+    background-color: rgba(0, 200, 0, 10%);
+    border-radius: 7px;
+    border: 1px solid rgba(0, 200, 0, 70%);
+    color: rgba(1, 163, 1, 0.9);
+    cursor: pointer;
 }
