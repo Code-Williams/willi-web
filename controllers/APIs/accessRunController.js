@@ -1,3 +1,11 @@
+/* 
+    In this side, we handle all requests for run a discord bot
+    Anything we want is check if is bot registered and have access to run, and send callback to request
+    That's better if we can have a system for commands and security, for exmaple if a bot have access to run, send encrypted codes to bot and in bot side we have to decrypt codes and start using it
+    codes comes from github raw system cause we need to be update to latest version
+    also we can use raw system for main project
+*/
+
 const Bot = require("../../models/Bots")
 const templates = require("../../utils/jsonCallBackTemplate")
 const botChecker = require("../../helpers/botFirstCheck")

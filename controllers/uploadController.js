@@ -1,3 +1,9 @@
+/* 
+    That's a personal side, we can upload anything we want and share my-self website's link to access the file
+    Anyone uploads the file can manage it, files added to dashboard but not in bot's side, in another side like downer of bot's side
+    Admins have a panel for manage all files (they can't see anything but they can manage it) by searching file's name (or file's owner and see all files for owner of website about security reasons)
+*/
+
 const Upload = require("../models/Upload")
 
 const get = async (req, res) => {
