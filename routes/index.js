@@ -2,6 +2,8 @@ const express = require("express")
 const Router = new express.Router()
 const { isLoggedIn, isNotLoggedIn, isUserAdmin } = require("../helpers/auth")
 
+const upload = require("../helpers/uploader")
+
 const homePageController = require("../controllers/homePageController")
 Router.get("/", homePageController.get)
 
@@ -26,6 +28,7 @@ const registerController = require("../controllers/registerController")
 Router.get("/register", isNotLoggedIn, registerController.get)
 
 const uploadController = require("../controllers/uploadController")
-Router.get("/uploader", isLoggedIn, uploadController.get)
+Router.get("/uploader", uploadController.get)
+Router.post("/uploader", upload.single('file'), uploadController.post)
 
 module.exports = Router
