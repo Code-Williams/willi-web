@@ -1,6 +1,7 @@
-const Service = require("../models/Uploads")
+const Upload = require("../models/Upload")
 
 const get = async (req, res) => {
+
     res.render("uploader", {
         user : req.user,
         flash : req.flash()
@@ -10,14 +11,14 @@ const get = async (req, res) => {
 const post = async (req, res) => {
     if(req.file){
         if(req.file.filename){
-            console.log(req.body)
 
-            await Service.create({
+            await Upload.create({
                 file : req.file.filename,
-                userId : req.user.id,
-                fileName : req.body.name
+                username : req.body.name,
+                number : req.body.number,
+                email : req.body.email
             })
-            req.flash("success", "فایل شما با موفقیت آپلود شد")
+            req.flash("success", "فایل شما با موفقیت آپلود شد.")
             res.redirect("/uploader")
             return
         }

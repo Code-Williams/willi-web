@@ -13,6 +13,26 @@
     <body>
         <%- include("./templates/header.ejs") %>
 
-        
+        <% for(const key in flash){ %>
+                          
+            <span role="alert" class="flash">
+              <%= flash[key] %>
+            </span>
+
+          <% } %>
+
+          <div class="uploader-main">
+            <form action="/uploader" method="post" enctype="multipart/form-data" class="form-input">
+
+                <div class="services-right">
+                    <input type="text" name="name"  placeholder="نام" value="<%= (user) ? `${user.firstName} ${user.lastName}` : '' %>" required class="services-inp">
+                    <textarea type="text" name="description" placeholder="توضیحات" required class="services-inp"> </textarea>
+
+                    <input type="file" name="file" class="uploadFile" id="file2" >
+                    <button type="submit" class="submit">ارسال فایل</button>
+                </div>
+
+            </form>
+        </div>
     </body>
 </html>
