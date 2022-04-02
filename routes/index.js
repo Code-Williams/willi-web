@@ -15,9 +15,6 @@ const loginPageController = require("../controllers/loginPageController")
 Router.get("/login", isNotLoggedIn, loginPageController.get)
 Router.post("/login", loginPageController.post, loginPageController.loginSuccess)
 
-// const registerController = require("../controllers/registerController")
-// Router.get("/register", registerController.get)
-
 const dashboardController = require("../controllers/dashboardController")
 Router.get("/dashboard", isLoggedIn, dashboardController.get)
 
@@ -28,7 +25,27 @@ const registerController = require("../controllers/registerController")
 Router.get("/register", isNotLoggedIn, registerController.get)
 
 const uploadController = require("../controllers/uploadController")
-Router.get("/uploader", uploadController.get)
+Router.get("/uploader", isLoggedIn, uploadController.get)
 Router.post("/uploader", upload.single('file'), uploadController.post)
+
+Router.get("/discord", (req, res) => {
+    res.redirect("https://discord.gg/ZSaNmq5W37")
+})
+
+Router.get("/instagram", (req, res) => {
+    res.redirect("https://www.instagram.com/shayan._.williams")
+})
+
+Router.get("/youtube", (req, res) => {
+    res.redirect("https://youtube.com/c/Code_Williams")
+})
+
+Router.get("/twitter", (req, res) => {
+    res.redirect("https://twitter.com/Williams_Shayan")
+})
+
+Router.get("/telegram", (req, res) =>{
+    res.redirect("https://t.me/wil1i")
+})
 
 module.exports = Router
