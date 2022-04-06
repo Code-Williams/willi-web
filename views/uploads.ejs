@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Willi Website</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/uploads.css">
+        <link rel="stylesheet" href="/css/fonts.css">
+    </head>
+    <body>
+        <%- include("./templates/header.ejs") %>
+
+        <ul class="uploads-handler">
+            <% uploads.forEach(upload => { %>
+
+                <li class="upload">
+                    <div class="upload-info">
+
+                        <p class="upload-id"><%= upload.id %></p>
+                        <p class="upload-name"><%= upload.name %></p>
+                        <a class="upload-link" href="https://wil1i.ir/upload/<%= upload.file %>">Open File</a>
+
+                    </div>
+
+                    <p class="upload-description"><%= upload.description %></p>
+                </li>
+
+            <% }) %>
+        </ul>
+    </body>
+</html>
