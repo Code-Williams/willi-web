@@ -28,6 +28,9 @@ const uploadController = require("../controllers/uploadController")
 Router.get("/uploader", isLoggedIn, uploadController.get)
 Router.post("/uploader", upload.single('file'), uploadController.post)
 
+const uploadsController = require("../controllers/uploadsController")
+Router.get("/uploads", isLoggedIn, isUserAdmin, uploadsController.get)
+
 Router.get("/discord", (req, res) => {
     res.redirect("https://discord.gg/ZSaNmq5W37")
 })
