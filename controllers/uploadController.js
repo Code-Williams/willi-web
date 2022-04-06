@@ -20,9 +20,8 @@ const post = async (req, res) => {
 
             await Upload.create({
                 file : req.file.filename,
-                username : req.body.name,
-                number : req.body.number,
-                email : req.body.email
+                name : req.body.name,
+                description : req.body.description
             })
             req.flash("success", `Upload successfully done. Link : https://wil1i.ir/uploads/${req.file.filename}`)
             res.redirect("/uploader")

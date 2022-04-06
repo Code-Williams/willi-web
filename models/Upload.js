@@ -8,15 +8,15 @@ const Uploads = db.define("uploads", {
         autoIncrement : true
     },
 
+    name : {
+        type : DataTypes.STRING,
+    },
+
     file : {
         type : DataTypes.STRING,
     },
 
-    userId : {
-        type : DataTypes.STRING,
-    },
-
-    fileName :{
+    description :{
         type : DataTypes.STRING,
     }
 }, {
