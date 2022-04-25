@@ -1,0 +1,57 @@
+.main-handler {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.handler {
+  background-color: white;
+  width: 70%;
+  height: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.social {
+  color: white;
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+
+#instagram {
+  background-color: rgba(209, 36, 96, 0.8);
+  border: 2px solid rgba(209, 36, 96, 1);
+}
+
+#discord {
+  background-color: rgba(150, 50, 150, 0.8);
+  border: 2px solid rgba(150, 50, 150, 1);
+}
+
+#youtube {
+  background-color: rgba(237, 50, 50, 0.8);
+  border: 2px solid rgba(237, 50, 50, 1);
+}
+
+#telegram {
+  background-color: rgba(0, 110, 255, 0.7);
+  border: 2px solid rgba(0, 110, 255, 1);
+}
+
+#whatsapp {
+  background-color: rgba(64, 193, 64, 0.8);
+  border: 2px solid rgba(64, 193, 64, 1);
+}
