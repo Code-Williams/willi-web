@@ -141,3 +141,30 @@ body{
 .bot-image{
     border-radius: 50%;
 }
+
+.category-name {
+    font-size: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.category-name:before,
+.category-name:after {
+    background-color: rgb(138, 138, 138);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.category-name:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.category-name:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
