@@ -6,7 +6,6 @@ const session = require("express-session")
 const cookieParser = require("cookie-parser")
 const passport = require("passport")
 
-const PORT = 3000
 const app = express()
 
 app.use(bodyParser.json());
@@ -31,6 +30,6 @@ app.use("/", routes)
 const apiRoutes = require("./routes/api")
 app.use("/api", apiRoutes)
 
-app.listen(PORT , () => {
-    console.log(`Server is listening to ${PORT}`)
+app.listen(config.app.port , () => {
+    console.log(`Server is listening to ${config.app.port}`)
 })
