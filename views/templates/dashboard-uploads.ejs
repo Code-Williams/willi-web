@@ -28,7 +28,10 @@
                 </div>
 
                 <div>
-                    <button id="upload-download"><a href="/uploads/<%=file.file%>">Download</a></button><button id="upload-delete">Delete</button>
+                    <button id="upload-download" class="uploadsStyle-btn"><a href="/uploads/<%=file.file%>">Download</a></button>
+                    <form action="/uploads/del?id=<%= file.id %>" method="post" style="float: left; width: auto; margin-right: 10px;">
+                        <button id="upload-delete" type="submit" class="uploadsStyle-btn">Delete</button>
+                    </form>
                 </div>
                 
             </div>
