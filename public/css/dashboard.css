@@ -168,3 +168,62 @@ body{
     left: 0.5em;
     margin-right: -50%;
 }
+
+.uploadsStyle{
+    padding: 4%;
+    width: 91% !important;
+    height: 91% !important;
+    justify-content: space-between;
+}
+
+.uploadsStyle > div{
+    width: 100%;
+}
+
+.uploadsStyle > div > button{
+    padding: 2px 5px;
+    border-radius: 5px;
+    width: 80px;
+}
+
+#upload-download{
+    background-color: rgba(0, 150, 255, 0.5);
+    border: 1px solid rgba(0, 150, 255, 0.8);
+    margin-right: 10px;
+}
+
+#upload-delete{
+    background-color: rgba(249, 46, 32, 0.5);
+    border: 1px solid rgba(249, 46, 32, 0.8);
+}
+
+.uploadInfo{
+    border-bottom: 1px solid rgb(99, 99, 99);
+    height: 25px;
+}
+
+.uploadInfo:first-child{
+    border-bottom: 1px solid gray !important;
+    height: 35px;
+}
+
+.uploadInfo > p{
+    float: left;
+    width: 50%;
+    font-size: 12px;
+}
+
+.uploadInfo-description{
+    text-align: right;
+    color: rgb(200, 200, 200);
+}
+
+.uploadInfo-name{
+    width: 100% !important;
+    text-align: center;
+    font-size: 17px !important;
+}
+
+.uploadInfo:not(:first-child){
+    margin-top: 8px;
+}
