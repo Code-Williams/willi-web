@@ -24,7 +24,8 @@
   width: 90%;
   height: 10%;
   display: flex;
-  justify-content: center;
+  overflow: hidden; 
+  justify-content: space-between;
   align-items: center;
   border-radius: 10px;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
@@ -54,4 +55,16 @@
 #whatsapp {
   background-color: rgba(64, 193, 64, 0.8);
   border: 2px solid rgba(64, 193, 64, 1);
+}
+
+.social-text{
+  float: left; 
+  width: 57%;
+  color: white; 
+  font-size: 20px;
+}
+
+.social-image{
+  width: 70px; 
+  transform: rotateZ(20deg);
 }
