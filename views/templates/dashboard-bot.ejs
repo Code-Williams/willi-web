@@ -1,5 +1,8 @@
 <ul class="mainUL">
-    <h1 class="category-name">Bots</h1>
+    <% if(userBots.length > 0){ %>
+      <h1 class="category-name">Bots</h1>
+    <% } %>
+
     <% userBots.forEach(bot => { %> <% const nameSplit = bot.name.split("#")
     %>
 

@@ -1,0 +1,37 @@
+<ul class="mainUL">
+    <% if(uploads.length > 0){ %>
+        <h1 class="category-name">Uploads</h1>
+    <% } %>
+
+    <% uploads.forEach(file => { %>
+        <li class="sub-li">
+            <div class="mainDiv uploadsStyle">
+                <div>
+
+                    <ul class="uploadInfos">
+                        <li class="uploadInfo">
+                            <p class="uploadInfo-name"><%= file.name %></p>
+                        </li>
+
+                        <li class="uploadInfo">
+                            <p class="uploadInfo-title">ID:</p>
+                            <p class="uploadInfo-description"><%= file.id %></p>
+                        </li>
+
+                        <li class="uploadInfo">
+                            <p class="uploadInfo-title">Description:</p>
+                            <p class="uploadInfo-description"><%= file.description %></p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div>
+                    <button id="upload-download"><a href="/uploads/<%=file.file%>">Download</a></button><button id="upload-delete">Delete</button>
+                </div>
+                
+            </div>
+        </li>
+    <% }) %>
+</ul>
