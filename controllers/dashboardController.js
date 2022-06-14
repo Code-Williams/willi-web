@@ -5,6 +5,7 @@
 */
 
 const Bot = require("../models/Bots")
+const Upload = require("../models/Upload")
 
 const get = async (req, res) => {
     const userBots = await Bot.findAll({
@@ -13,9 +14,16 @@ const get = async (req, res) => {
         }
     })
 
+    const uploads = await Upload.findAll({
+        where : {
+            user : req.user.username
+        }
+    })
+
     res.render("dashboard", {
         user : req.user,
         userBots,
+        uploads,
         flash : req.flash()
     })
 }
