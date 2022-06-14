@@ -1,3 +1,9 @@
+/* 
+    * This uploads controller have two methods:
+    ? 1- get: This method is used to render the uploads page and shows all files which is uploaded.
+    ? 2- post: This method is used to delete a file from uploaded files.
+*/
+
 const Upload = require("../models/Upload")
 
 const get = async (req, res) => {
