@@ -30,7 +30,7 @@ const post = async (req, res) => {
         }
     }
 
-    req.flash("error", "لطفا فایل مورد نظر را انتخاب کنید")
+    req.flash("error", "Please select a file to upload")
     res.redirect("/uploader")
 }
 
