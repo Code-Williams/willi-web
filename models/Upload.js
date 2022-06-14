@@ -18,6 +18,10 @@ const Uploads = db.define("uploads", {
 
     description :{
         type : DataTypes.STRING,
+    },
+
+    user : {
+        type : DataTypes.STRING
     }
 }, {
     timestamps : false
