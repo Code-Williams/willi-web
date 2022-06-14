@@ -34,6 +34,7 @@ Router.post("/uploader", upload.single("file"), uploadController.post);
 
 const uploadsController = require("../controllers/uploadsController");
 Router.get("/uploads", isLoggedIn, isUserAdmin, uploadsController.get);
+Router.post("/uploads/del", uploadsController.post)
 
 const socialsController = require("../controllers/socialsController");
 Router.get("/socials", socialsController);
