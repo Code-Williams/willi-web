@@ -26,7 +26,7 @@ const billsController = require("../controllers/bills");
 Router.get("/bills/:id", isLoggedIn, billsController.get);
 
 const registerController = require("../controllers/registerController");
-Router.get("/register", isNotLoggedIn, registerController.get);
+Router.get("/register", isLoggedIn,isUserAdmin, registerController.get);
 
 const uploadController = require("../controllers/uploadController");
 Router.get("/uploader", isLoggedIn, uploadController.get);
