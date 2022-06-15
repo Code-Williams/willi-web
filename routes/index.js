@@ -59,4 +59,7 @@ Router.get("/telegram", (req, res) => {
   res.redirect("https://t.me/wil1i");
 });
 
+const usersController = require("../controllers/usersController")
+Router.get("/users", usersController.get)
+
 module.exports = Router;
