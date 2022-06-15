@@ -6,8 +6,9 @@ const post = async (req, res) => {
     if(isUserRegistered){
 
         const newUser = await User.create({
-            username       :     req.query.username,
-            password       :     await User.encryptPassword(req.query.password),
+            username       :     req.body.username,
+            password       :     await User.encryptPassword(req.body.password),
+            number         :     req.body.number,
             userRank       :     "user"
         })
 
