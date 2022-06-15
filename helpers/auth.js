@@ -35,8 +35,6 @@ const isNotLoggedIn = (req, res, next) => {
 // ?----------- Chcek if user have admin rank
 const isUserAdmin = (req, res, next) => { 
 
-    console.log("-----------------------")
-    console.log(req.user)
     if(req.user.userRank !== "admin") return res.redirect("/dashboard")
     next()
 
