@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Willi Website</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/fonts.css">
+        <link rel="stylesheet" href="/css/users.css">
+    </head>
+    <body>
+        <%- include("./templates/header.ejs") %>
+
+        <!-- TODO: Add edit buttons with like ajax -->
+        <!-- ? What that mean ? for example we have a change password button and when admin clicked on it, a input comes out from back of main box and have a submit button which is user can click it after enter new password -->
+        <!-- ! For animating coming out we can use javascript -->
+
+        <ul id="users">
+
+            <% users.forEach(user => { %>
+                
+                <li class="user">
+                    <div class="user-title">
+                        <div>
+                            <p class="user-title-first">Name:</p>
+                            <p class="user-title-second"><%= user.username %></p>
+                        </div>
+                    </div>
+
+                    <% if(user.id && user.id !== ""){ %>
+
+                        <div class="user-information">
+                            <p>ID: </p>
+                            <p><%= user.id %></p>
+                        </div>
+
+                    <% } %> 
+
+                    <% if(user.number && user.number !== ""){ %>
+
+                        <div class="user-information">
+                            <p>Number: </p>
+                            <p><%= user.number %></p>
+                        </div>
+
+                    <% } %>
+                </li>
+                
+            <% }) %>
+
+        </ul>
+    </body>
+</html>
