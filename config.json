@@ -1,7 +1,0 @@
-{
-    "app" : {
-        "port" : 80,
-        "secret" : "willi team secret key"
-    }
-
-}

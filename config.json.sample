@@ -1,0 +1,7 @@
+{
+    "app" : {
+        "port" : PORT HERE,
+        "secret" : "SECRET KEY HERE"
+    }
+
+}
