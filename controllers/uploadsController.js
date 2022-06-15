@@ -5,6 +5,7 @@
 */
 
 const Upload = require("../models/Upload")
+const fs = require("fs")
 
 const get = async (req, res) => {
     const uploads = await Upload.findAll()
@@ -21,8 +22,14 @@ const post = async (req, res) => {
     const isFileAvailable = await Upload.findByPk(fileID)
 
     if(isFileAvailable){
-        isFileAvailable.destroy()
-        req.flash("success", `Successfully deleted file with id ${fileID}`)
+        fs.unlink(`../../public/uploads/${fileID}`, (err) => {
+            if(err){
+                req.flash("error", `File with id ${fileID} not found`)
+            }else{
+                isFileAvailable.destroy()
+                req.flash("success", `Successfully deleted file with id ${fileID}`)
+            }
+        })
         res.redirect("/dashboard")
     }else{
         req.flash("error", `File with id ${fileID} not found`)
