@@ -6,8 +6,15 @@
 
 const Bot = require("../models/Bots")
 const Upload = require("../models/Upload")
+const Work = require("../models/Work")
 
 const get = async (req, res) => {
+    const works = await Work.findAll({
+        where : {
+            userId : req.user.id
+        }
+    })
+
     const userBots = await Bot.findAll({
         where : {
             owner : req.user.username
@@ -24,6 +31,7 @@ const get = async (req, res) => {
         user : req.user,
         userBots,
         uploads,
+        works,
         flash : req.flash()
     })
 }
