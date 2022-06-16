@@ -1,0 +1,18 @@
+<ul class="mainUL">
+
+    <% if(works.length > 0){ %>
+        <h1 class="category-name">Works</h1>
+    <% } %>
+
+    <% works.forEach(work => { %>
+
+        <li class="sub-li">
+            <div class="mainDiv">
+                <h1><%= work.name %></h1>
+                <p><%= work.description %></p>
+            </div>
+        </li>
+        
+    <% }) %>
+
+</ul>

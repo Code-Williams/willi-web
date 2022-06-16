@@ -1,3 +1,5 @@
+const User = require("../models/User")
+
 // ?----------- Check if user is logged in
 const isLoggedIn = (req, res, next) => {
 
@@ -12,25 +14,12 @@ const isLoggedIn = (req, res, next) => {
     next();
 }
 
-
-
-
-
-
-
-
 // ?----------- Check if user is not logged in
 const isNotLoggedIn = (req, res, next) => { 
 
     if(req.user) return res.redirect("/dashboard")
     next()
 }
-
-
-
-
-
-
 
 // ?----------- Chcek if user have admin rank
 const isUserAdmin = (req, res, next) => { 
@@ -40,15 +29,22 @@ const isUserAdmin = (req, res, next) => {
 
 }
 
+const isUserStudent = async (req, res, next) => {
 
+    const findUser = await User.findOne({
+        where : {
+            username : req.user.username
+        }
+    })
 
+    if(!findUser || findUser.userRank !== "student") res.redirect("/dashboard")
+    next()
 
-
-
-
+}
 
 module.exports = {
     isLoggedIn,
     isNotLoggedIn,
-    isUserAdmin
+    isUserAdmin,
+    isUserStudent
 }
