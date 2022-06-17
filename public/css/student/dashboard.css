@@ -31,3 +31,64 @@
 .bigger-line{
     margin-bottom: 14px;
 }
+
+.student-point > p{
+    float: left;
+    direction: rtl;
+}
+
+.student-point > p:last-child{
+    font-weight: bold;
+}
+
+.student-point{
+    float: left;
+}
+
+.student-left2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    float: left;
+}
+
+.student-left{
+    float: left;
+    height: 100%;
+    width: 77%;
+}
+
+.student-left2-bottom{
+    float: left;
+}
+
+.student-secondD{
+    width: 750px; 
+    background-color: white;
+    height: 300px; 
+    border-radius: 10px; 
+    padding: 15px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.03);
+}
+
+.student-firstD{
+    width: 100%; 
+    height: 90vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.student-left1{
+    float: right;
+    direction: rtl;
+}
+
+.student-left1 > ul{
+    overflow: scroll;
+}
+
+.pm-name{
+    font-weight: bold;
+}

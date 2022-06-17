@@ -82,3 +82,12 @@ li{
     background-color: transparent;
     color: rgb(104, 253, 112);
 }
+
+.danger-button{
+    background-color: rgba(241, 70, 70, 0.557);
+    border: 1px solid red;
+    padding: 3px 6px;
+    border-radius: 10px;
+    color: rgb(140, 0, 0);
+    cursor: pointer;
+}
